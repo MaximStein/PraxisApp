@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PraxisApp.Hilfe"
+             xmlns:local="clr-namespace:PraxisApp"
+             Title="Hilfe/Notfall">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Padding="10,10,10,30">
+                <Label>
+                    Außerhalb der Sprechzeiten unserer Praxis erhalten Sie Hilfe bei:
+                </Label>
+
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                <Label HorizontalTextAlignment="Center" FontAttributes="Bold">Kinderkrankenhaus Altona</Label>
+                <Label HorizontalTextAlignment="Center">
+                    Bleickenallee 38
+22763 Hamburg
+                </Label>
+                <local:MyButton StyleClass="SecondaryButton" Clicked="PhoneCallButtonClicked" Image="telefon.png" Text="040 - 88 90 80"></local:MyButton>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Sa., So., Feiertage:</Label>
+                    <Label FontSize="Micro">10.00 - 18.00 Uhr</Label>
+                </StackLayout>
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                <Label FontAttributes="Bold" HorizontalTextAlignment="Center">Notfallpraxis Altona</Label>
+                <Label HorizontalTextAlignment="Center">Stresemannstraße 54
+22769 Hamburg</Label>
+
+                <local:MyButton StyleClass="SecondaryButton" Clicked="PhoneCallButtonClicked" Image="telefon.png" Text="040 - 22 80 22"></local:MyButton>
+                <StackLayout HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Mo. - Fr.:</Label>
+                        <Label FontSize="Micro">19.00 - 24.00 Uhr</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Mi.:</Label>
+                        <Label FontSize="Micro" >13.00- 24.00 Uhr</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Sa., So., Feiertage:</Label>
+                        <Label FontSize="Micro" >07.00 - 24.00 Uhr</Label>
+                    </StackLayout>
+                </StackLayout>
+                
+                          
+                
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                
+                <Label HorizontalTextAlignment="Center" FontAttributes="Bold">Kassenärztlicher 
+Telefonbereitschaftsdienst</Label>
+                <Label HorizontalTextAlignment="Center">
+                    Arztruf Hamburg
+                </Label>
+                <local:MyButton StyleClass="SecondaryButton" Clicked="PhoneCallButtonClicked" Image="telefon.png" Text="040 - 116117"></local:MyButton>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Mo., Di., Do:</Label>
+                    <Label FontSize="Micro">18.00 - 8.00 Uhr</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Mi.:</Label>
+                    <Label FontSize="Micro">13.00 - 8.00 Uhr</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Fr.:</Label>
+                    <Label FontSize="Micro">17.00 - 8.00 Uhr</Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Sa., So., Feiertage:</Label>
+                    <Label FontSize="Micro">8.00 - 8.00 Uhr</Label>
+                </StackLayout>
+
+
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                 <Label HorizontalTextAlignment="Center" FontAttributes="Bold">Und alle Kinderkardiologischen Notfälle</Label>
+                <Label HorizontalTextAlignment="Center" FontAttributes="Bold">Universitätsklinikum Hamburg-Eppendorf (UKE)</Label>
+                <Label HorizontalTextAlignment="Center">Kinderklinik Notaufnahme 
+(im Gebäude N23)</Label>
+
+               
+                <Label HorizontalTextAlignment="Center">Martinistraße 52
+20246 Hamburg
+                </Label>
+                
+                <local:MyButton StyleClass="SecondaryButton" Clicked="PhoneCallButtonClicked" Image="telefon.png" Text="040 - 7410 204 00"></local:MyButton>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Mo.- So.: </Label>
+                    <Label FontSize="Micro">0.00 - 24.00 Uhr</Label>
+                </StackLayout>
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                <Label HorizontalTextAlignment="Center" FontAttributes="Bold">Helios Mariahilf Klinik</Label>
+                <Label HorizontalTextAlignment="Center">Stader Straße 203 c
+21075 Hamburg
+                </Label>
+
+                <local:MyButton StyleClass="SecondaryButton" Clicked="PhoneCallButtonClicked" Image="telefon.png" Text="040 - 79 00 60" Margin="0,0,0,15"></local:MyButton>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label FontSize="Micro" HorizontalOptions="StartAndExpand">Sa., So., Feiertage: </Label>
+                    <Label FontSize="Micro">11.00 - 18.00 Uhr</Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

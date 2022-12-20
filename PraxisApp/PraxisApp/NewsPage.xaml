@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Neuigkeiten" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PraxisApp.NewsPage">
+	<ContentPage.Content>
+            <WebView x:Name="news_webview" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></WebView>
+	</ContentPage.Content>
+</ContentPage>

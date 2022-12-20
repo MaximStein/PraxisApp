@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PraxisApp.Leistungen"
+             Title="Leistungen"
+             xmlns:local="clr-namespace:PraxisApp"       
+             >
+
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Orientation="Vertical" Margin="10,10,10,10">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" StyleClass="DefaultMargin">
+                    <local:MyButton TextAlignment="Left" Image="stethoskop.png" StyleClass="PrimaryButton" Clicked="SectionButtonClicked" x:Name="leistungenButton1" Text="Allgemeine Pädiatrie"></local:MyButton>
+                    <StackLayout Orientation="Vertical" IsVisible="True" x:Name="leistungenText1">
+                        <local:JustifiedLabel x:Name="leistungenLabel1">Wir betreuen Ihre Kinder von der Geburt bis zum 18. Lebensjahr, gegebenenfalls und ausnahmsweise auch darüber hinaus.	
+
+Es werden alle akuten und chronischen Krankheiten durch unsere Ärzte behandelt, Vorsorgen und Impfungen gehören natürlich auch dazu. Wir führen Hör-, Seh- und Sprachtests, auch im Rahmen der Vorsorgen durch sowie verschiedene Tests zur Entwicklungsdiagnostik. 
+
+Weiterhin bietet Dr. Müller-Scholtz aufgrund seiner Spezialisierung zum Neonatologen die Begleitung und Nachsorge rund um das frühgeborene Kind an.
+
+Für die Behandlung akuter Gesundheitsprobleme, z.B. Infekte, Gastroenteritiden, Verletzungen usw. gibt es eine tägliche Akutsprechstunde, hierfür brauchen Sie/Ihr Kind keinen Termin.</local:JustifiedLabel>
+                        
+
+                        <StackLayout Orientation="Horizontal"  Margin="0,10,0,10" BackgroundColor="#cdf0ff">
+                            <BoxView StyleClass="AccentLineLeft"></BoxView>
+                            <Label Margin="0,10,10,10">
+                                <Label.Text>
+                                    Für alle weiteren Untersuchungen oder Anliegen, auch längere Gespräche oder aufwändigere Untersuchungen bitten wir Sie, einen Termin zu vereinbaren.
+                                </Label.Text>
+                            </Label>
+                        </StackLayout>
+
+                        <Button StyleClass="TerminButton" Clicked="TerminButtonClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="SeparatorLine"/>
+
+                <StackLayout Orientation="Vertical" StyleClass="DefaultMargin">
+
+                    <local:MyButton TextAlignment="Left" Image="spritze.png" StyleClass="PrimaryButton" Clicked="SectionButtonClicked" ClassId="leistungenButton2" x:Name="leistungenButton2" Text="Impfungen"></local:MyButton>
+                    <StackLayout Orientation="Vertical"  x:Name="leistungenText2" IsVisible="True">
+                        <local:JustifiedLabel x:Name="leistungenLabel2">Wir bieten alle Regelimpfungen sowie die meisten Reiseimpfungen an. Unsere Impfungen entsprechen den Empfehlungen der Ständigen Impfkommission (STIKO) sowie den Richtlinien des Robert-Koch-Instituts (RKI).
+
+Auch erhalten Sie bei uns eine ausführliche Impfberatung und Impfaufklärung, um Ihre Fragen rund um das Thema „Impfen“ zu beantworten.</local:JustifiedLabel>
+                            
+                        <StackLayout Orientation="Horizontal" Margin="0,10,0,10" BackgroundColor="#cdf0ff">
+                            <BoxView StyleClass="AccentLineLeft"></BoxView>
+                            <Label Margin="0,10,10,10">Für alle Impfungen bitten wir Sie, einen Temrin zu vereinbaren. Bitte bringen Sie zum Impftermin den Impfpass Ihres Kindes mit!</Label>
+                        </StackLayout>
+
+                        <Button StyleClass="TerminButton" Clicked="TerminButtonClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <BoxView StyleClass="SeparatorLine"/>
+
+                <StackLayout Orientation="Vertical"  StyleClass="DefaultMargin">
+
+                    <local:MyButton TextAlignment="Left" Image="schild.png" StyleClass="PrimaryButton" Clicked="SectionButtonClicked" ClassId="leistungenButton3" x:Name="leistungenButton3" Text="Vorsorgen"></local:MyButton>
+                    <StackLayout Orientation="Vertical" x:Name="leistungenText3" IsVisible="True">
+                        <Grid Margin="0,30,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="0" Grid.ColumnSpan="2"></BoxView>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="2" Grid.ColumnSpan="2"></BoxView>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="4" Grid.ColumnSpan="2"></BoxView>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="6" Grid.ColumnSpan="2"></BoxView>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="8" Grid.ColumnSpan="2"></BoxView>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="10" Grid.ColumnSpan="2"></BoxView>
+                            <BoxView BackgroundColor="#ddd" Grid.Row="12" Grid.ColumnSpan="2"></BoxView>
+
+                            <Label StyleClass="VorsorgenLabel" Text="U2" Grid.Row="0" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U3" Grid.Row="1" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U4" Grid.Row="2" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U5" Grid.Row="3" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U6" Grid.Row="4" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U7" Grid.Row="5" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U7a" Grid.Row="6" Grid.Column="0" TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U8" Grid.Row="7" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U9" Grid.Row="8" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U10" Grid.Row="9" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="U11" Grid.Row="10" Grid.Column="0" TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="J1" Grid.Row="11" Grid.Column="0"  TextColor="Gray"/>
+                            <Label StyleClass="VorsorgenLabel" Text="J2" Grid.Row="12" Grid.Column="0"  TextColor="Gray"/>
+
+                            <Label StyleClass="VorsorgenLabel" Text="3.	bis	10. Lebenstag (wird meist in der Entbindungsklinik durchgeführt)" Grid.Row="0" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="4. bis 6. Lebenswoche (incl. Hüftultraschall)" Grid.Row="1" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="4. Lebensmonat" Grid.Row="2" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="6. Lebensmonat" Grid.Row="3" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="1. Lebensjahr" Grid.Row="4" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="2. Lebensjahr" Grid.Row="5" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="3. Lebensjahr" Grid.Row="6" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="4. Lebensjahr" Grid.Row="7" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="5. Lebensjahr" Grid.Row="8" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="mit 7 bis 8 Jahren" Grid.Row="9" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="mit 9 bis 10 Jahren" Grid.Row="10" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="mit 13 bis 14 Jahren" Grid.Row="11" Grid.Column="1" />
+                            <Label StyleClass="VorsorgenLabel" Text="mit 16 bis 17 Jahren" Grid.Row="12" Grid.Column="1" />
+                        </Grid>
+                        <StackLayout Orientation="Horizontal" Margin="0,10,0,10" BackgroundColor="#cdf0ff">
+                            <BoxView StyleClass="AccentLineLeft"></BoxView>
+                            <Label Margin="0,10,10,10">Für alle Vorsorgen bitten wir Sie, einen Termin zu vereinbaren.	
+Bitte bringen Sie zu den Vorsorgen den Impfpass sowie das Vorsorgeheft Ihres Kindes mit.</Label>
+                        </StackLayout>
+
+                        <Button StyleClass="TerminButton" Clicked="TerminButtonClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="SeparatorLine"/>
+
+                <StackLayout Orientation="Vertical"  StyleClass="DefaultMargin">
+                    <local:MyButton TextAlignment="Left" Image="lunge.png" StyleClass="PrimaryButton" Clicked="SectionButtonClicked" ClassId="leistungenButton3" x:Name="leistungenButton4" Text="Lunge - Allergien"></local:MyButton>
+                    <StackLayout Orientation="Vertical" x:Name="leistungenText4" IsVisible="True">
+                        <local:JustifiedLabel x:Name="leistungenLabel4">Wir betreuen Kinder und Jugendliche mit akuten und chronischen Erkrankungen der Atemwege, also mit Bronchitiden, Asthma und sonstigen Lungenerkrankungen.
+                            
+Wir bieten folgende Diagnostik an:</local:JustifiedLabel>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Messung der Sauerstoffsättigung im Blut</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Lungenfunktionstest (Spirometrie)</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Allergologische Diagnostik (Prick-Tests) und</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Therapie (u.a. Hyposensibilisierungen)</Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,10,0,10" BackgroundColor="#cdf0ff">
+                            <BoxView StyleClass="AccentLineLeft"></BoxView>
+                            <Label Margin="0,10,10,10">Wir bitten Sie, für alle Allergietestungen und Lungenfunktonsprüfungen einen Termin zu vereinbaren</Label>
+                        </StackLayout>
+
+                        <Button StyleClass="TerminButton" Margin="0,15,0,0" Clicked="TerminButtonClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView StyleClass="SeparatorLine"/>
+
+                <StackLayout Orientation="Vertical"  StyleClass="DefaultMargin">
+                    <local:MyButton TextAlignment="Left" Image="herz.png" StyleClass="PrimaryButton" 
+                                    Clicked="SectionButtonClicked" ClassId="leistungenButton3" x:Name="leistungenButton5" 
+                                    Text="Herz-  &amp; Sport-Untersuchungen"></local:MyButton>
+                    <StackLayout Orientation="Vertical" x:Name="leistungenText5" IsVisible="True">
+                        <local:JustifiedLabel x:Name="leistungenLabel5">Dr. Müller-Scholtz verfügt über die Weiterbildung zum Kinderkardiologen sowie das Zertifikat zur Behandlung von Erwachsenen mit angeborenen Herzfehlern. Daher betreut er Babys, Kinder, Jugendliche und Erwachsene mit angeborenem Herzfehler (EMAH).</local:JustifiedLabel>
+                        <Button StyleClass="TerminButton" Margin="0,15,0,0" Clicked="TerminButtonClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <BoxView StyleClass="SeparatorLine"/>
+
+                <StackLayout Orientation="Vertical"  StyleClass="DefaultMargin">
+                    <local:MyButton TextAlignment="Left" Image="igel.png" StyleClass="PrimaryButton" 
+                                    Clicked="SectionButtonClicked" ClassId="leistungenButton3" x:Name="leistungenButton6" 
+                                    Text="IGe-Leistungen"></local:MyButton>
+                    <StackLayout Orientation="Vertical" x:Name="leistungenText6" IsVisible="True">
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>zusätzliche Vorsorgeuntersuchungen</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Kindergartenuntersuchungen</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Reiseberatung (-Impfungen, Reiseapotheke)</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Impfungen der Familienangehörigen</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Atteste (Sport/Schule/Freizeit)</Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <BoxView StyleClass="BulletPointSquare"/>
+                            <Label>Ernährungsberatung</Label>
+                        </StackLayout>
+                        <Button StyleClass="TerminButton" Margin="0,15,0,0" Clicked="TerminButtonClicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

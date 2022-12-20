@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PraxisApp.Rezeptformular"
+             Title="Rezeptformular"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="errorColor">Red</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <TableView Intent="Form" HasUnevenRows="True">
+            <TableRoot x:Name="table_root">
+                
+                <TableSection Title="Patient">
+                    <EntryCell x:Name="patient_nachname" Label="Nachname*"></EntryCell>
+                    <EntryCell x:Name="patient_vorname" Label="Vorname*"></EntryCell>
+                    <EntryCell x:Name="patient_krankenkasse" Label="Krankenkasse*"></EntryCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Geburtsdatum" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Margin="15,15,0,15" ></Label>
+                            <DatePicker x:Name="patient_dob" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="0,0,15,0" Date="{Binding EventDateStart}">
+                                <DatePicker.Format>dd.MM.yyyy</DatePicker.Format>
+                            </DatePicker>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+
+                <TableSection Title="Eltern">
+                    <EntryCell x:Name="eltern_nachname" Label="Nachname*"></EntryCell>
+                    <EntryCell x:Name="eltern_vorname" Label="Vorname"></EntryCell>
+                    <EntryCell x:Name="eltern_tel" Label="Telefon*" Keyboard="Telephone" Placeholder="Bevorzugt Mobil"></EntryCell>
+                    <EntryCell x:Name="eltern_email" Label="E-Mail"></EntryCell>
+                </TableSection>
+       
+                <TableSection Title="Bei Rezept bitte Medikament angeben. Bei Überweisung bitte Fachrichtung angeben" >
+                    
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Weitere Angaben" HorizontalOptions="FillAndExpand" Margin="15,15,0,0" ></Label>
+                            <Editor Margin="15,0,15,15"  HorizontalOptions="FillAndExpand" x:Name="weitere_angaben"></Editor>
+                        </StackLayout>
+                    </ViewCell>
+
+                
+                    <ViewCell Height="95">
+                        <StackLayout Orientation="Horizontal" Margin="15,15,15,15">
+                            <Label StyleClass="Hyperlink" x:Name="agb_label" VerticalOptions="FillAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Ich habe die"></Span>
+                                        <Span Text=" AGB " FontAttributes="Bold" ForegroundColor="#1f59ff"></Span>
+                                        <Span Text="gelesen und erkläre mich damit einverstanden.*"></Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Switch VerticalOptions="CenterAndExpand" x:Name="agb_switch" Margin="0,0,5,0" ></Switch>
+                        </StackLayout>
+                    </ViewCell>
+
+
+                    <ViewCell Height="115">
+                        <StackLayout Orientation="Horizontal" Margin="15,10,15,5">
+                            <Label StyleClass="Hyperlink" x:Name="data_privacy_statement_label" VerticalOptions="FillAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>           
+                                        <Span Text="Ich habe die."></Span>
+                                        <Span Text=" Datenschutzbestimmungen " FontAttributes="Bold" ForegroundColor="#1f59ff" ></Span>
+                                        <Span Text="gelesen und erkläre mich damit einverstanden.*"></Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Switch VerticalOptions="CenterAndExpand" x:Name="data_privacy_statement_switch" Margin="0,0,5,0" ></Switch>
+                        </StackLayout>
+                    </ViewCell>
+
+                    
+                    <ViewCell Height="40">
+                        <Label Text="* Pflichtfeld" Margin="15,0,0,0" VerticalOptions="CenterAndExpand"></Label>
+                    </ViewCell>
+                    <ViewCell>
+                        <Button Clicked="RezeptFormAbschicken" Text="Abschicken" StyleClass="Primary" FontAttributes="Bold" Margin="15,5,15,0"></Button>
+                    </ViewCell>
+
+                </TableSection>
+
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

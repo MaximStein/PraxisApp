@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PraxisApp.Kontakt"
+             Title="Kontakt"
+             xmlns:local="clr-namespace:PraxisApp">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,10">
+            <local:MyButton Image="umschlag.png" Text="Nachricht per E-Mail" StyleClass="SecondaryButton" Clicked="MailClicked"></local:MyButton>
+            <local:MyButton Image="telefon.png" Text="Anruf (040 - 80 41 10)" StyleClass="SecondaryButton" Clicked="AnrufClicked"></local:MyButton>
+            <local:MyButton Image="haus.png" Text="Unsere Homepage" StyleClass="SecondaryButton" Clicked="HomepageClicked"></local:MyButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

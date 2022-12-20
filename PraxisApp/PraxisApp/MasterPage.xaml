@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="0,40,0,0"
+             x:Class="PraxisApp.MasterPage"
+             Icon="menu.png"
+             Title="PraxisApp"
+             BackgroundColor="White"
+             xmlns:local="clr-namespace:PraxisApp"
+             >
+    <ContentPage.Content>
+        <ScrollView >
+        <StackLayout Orientation="Vertical">
+            <local:MyButton TextAlignment="Left"  BackgroundColor="Transparent" Image="haus_gruen.png" Text="Home" x:Name="navigation_home"></local:MyButton>
+            <BoxView HeightRequest="1" BackgroundColor="Silver" HorizontalOptions="FillAndExpand"></BoxView>
+            <local:MyButton TextAlignment="Left" BackgroundColor="Transparent" Image="news_gruen.png" Text="Neuigkeiten" x:Name="navigation_news"></local:MyButton>
+             <BoxView HeightRequest="1" BackgroundColor="Silver" HorizontalOptions="FillAndExpand"></BoxView>
+                <local:MyButton TextAlignment="Left" BackgroundColor="Transparent" Image="services_gruen.png" Text="Leistungen"  x:Name="navigation_leistungen" ></local:MyButton>
+            <BoxView HeightRequest="1" BackgroundColor="Silver" HorizontalOptions="FillAndExpand"></BoxView>
+            <local:MyButton TextAlignment="Left" BackgroundColor="Transparent" Image="kalender_gruen.png" Text="Terminformular"  x:Name="navigation_terminformular"></local:MyButton>
+            <BoxView HeightRequest="1" BackgroundColor="Silver" HorizontalOptions="FillAndExpand"></BoxView>
+            <local:MyButton TextAlignment="Left" BackgroundColor="Transparent" Image="umschlag_gruen.png" Text="Kontakt" x:Name="navigation_kontakt"></local:MyButton>
+            <BoxView HeightRequest="1" BackgroundColor="Silver" HorizontalOptions="FillAndExpand"></BoxView>
+            <local:MyButton TextAlignment="Left" BackgroundColor="Transparent" Image="verbandskasten_gruen.png" Text="Hilfe/Notfall" x:Name="navigation_hilfe"></local:MyButton>
+            <BoxView HeightRequest="1" BackgroundColor="Silver" HorizontalOptions="FillAndExpand"></BoxView>
+            <local:MyButton TextAlignment="Left" BackgroundColor="Transparent" Image="rezept_gruen.png" Text="Rezepte/Überweisung" x:Name="navigation_rezepte"></local:MyButton>           
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

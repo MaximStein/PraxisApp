@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PraxisApp.HomePage"
+             Title="Startseite"
+             xmlns:local="clr-namespace:PraxisApp"       
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,10,10,10">
+
+                <Label FontSize="Large" Margin="0,0,0,20">Dr. med. Jörg Müller-Scholtz</Label>
+
+                <StackLayout Orientation="Horizontal">
+                    <BoxView StyleClass="BulletPointSquare"></BoxView>
+                    <Label Text="Kinder- &amp; Jugendmedizin"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <BoxView StyleClass="BulletPointSquare"></BoxView>
+                    <Label Text="Kinderkardiologie"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <BoxView StyleClass="BulletPointSquare"></BoxView>
+                    <Label Text="Erwachsene mit angeborenen Herzfehlern"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <BoxView StyleClass="BulletPointSquare"></BoxView>
+                    <Label Text="Neonatologie"/>
+                </StackLayout>
+
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                <Label FontAttributes="Bold">Öffnungszeiten:</Label>
+
+                <Grid  x:Name="Terminkalender">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView Grid.ColumnSpan="4" BackgroundColor="#97be0d"></BoxView>
+
+                    <BoxView Grid.Row="2" Grid.ColumnSpan="4" BackgroundColor="#ffe59a"></BoxView>
+                    <BoxView Grid.Row="4" Grid.ColumnSpan="4" BackgroundColor="#ffe59a"></BoxView>
+
+                    <Label FontSize="Small" Text="vormittags" Grid.Row="0" Grid.Column="1" StyleClass="Header" TextColor="White"/>
+                    <Label FontSize="Small" Text="nachmittags" Grid.Row="0" Grid.Column="2" StyleClass="Header" TextColor="White"/>
+                    <Label FontSize="Small" Text="akut" Grid.Row="0" Grid.Column="3" StyleClass="Header" TextColor="White"/>
+
+                    <Label Text="Mo" StyleClass="Header"  Grid.Row="1" TextColor="Gray"/>
+                    <Label Text="Di" StyleClass="Header"  Grid.Row="2" TextColor="Gray"/>
+                    <Label Text="Mi" StyleClass="Header"  Grid.Row="3" TextColor="Gray"/>
+                    <Label Text="Do" StyleClass="Header"  Grid.Row="4" TextColor="Gray"/>
+                    <Label Text="Fr"  StyleClass="Header" Grid.Row="5" TextColor="Gray"/>
+
+                    <Label Text="9-13 Uhr" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="9-13 Uhr" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="9-13 Uhr" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="9-12 Uhr" Grid.Row="4" Grid.Column="1"/>
+                    <Label Text="9-13 Uhr" Grid.Row="5" Grid.Column="1"/>
+
+                    <Label Text="15-17 Uhr" Grid.Row="1" Grid.Column="2"/>
+                    <Label Text="13-17 Uhr" Grid.Row="2" Grid.Column="2"/>
+                    <Label Text="-" Grid.Row="3" Grid.Column="2"/>
+                    <Label Text="16-18 Uhr" Grid.Row="4" Grid.Column="2"/>
+                    <Label Text="-" Grid.Row="5" Grid.Column="2"/>
+
+                    <Label Text="9-10 Uhr 15-15:30" Grid.Row="1" Grid.Column="3"/>
+                    <Label Text="9-10 Uhr 15-15:30" Grid.Row="2" Grid.Column="3"/>
+                    <Label Text="9-10 Uhr" Grid.Row="3" Grid.Column="3"/>
+                    <Label Text="9-10 Uhr" Grid.Row="4" Grid.Column="3"/>
+                    <Label Text="9-10 Uhr" Grid.Row="5" Grid.Column="3"/>
+
+                </Grid>
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+                <Label TextColor="Gray">
+                    Adresse:
+                </Label>
+
+                <Label>
+                    Langelohstrasse 151
+22549	Hamburg</Label>
+
+                <BoxView StyleClass="SeparatorLine"></BoxView>
+
+                <local:MyButton Clicked="KontaktButtonClicked" Margin="0,20,0,0" TextAlignment="Left"  StyleClass="SecondaryButton" Image="umschlag.png" Text="Kontakt"></local:MyButton>
+                <local:MyButton Clicked="HvvButtonClicked" TextAlignment="Left"  StyleClass="SecondaryButton" Image="haltestelle.png" Text="HVV-Verbindung"></local:MyButton>
+                <local:MyButton Clicked="AnfahrtButtonClicked" TextAlignment="Left"  StyleClass="SecondaryButton" Image="auto.png" Text="Anfahrt"></local:MyButton>
+                <Label></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
